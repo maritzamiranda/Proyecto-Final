@@ -5,7 +5,7 @@ from routes.compras import compras
 from routes.inventario import productos
 from routes.ventas import ventas
 from flask_bcrypt import Bcrypt
-from flask_migrate import Migrate
+# from flask_migrate import Migrate
 from utils.loginManagerService import login_manager
 from utils.db import db
 
@@ -17,7 +17,7 @@ app.config.from_object("config.BaseConfig")
 SQLAlchemy(app)
 Bcrypt(app)
 login_manager.init_app(app)
-Migrate(app, db)
+# Migrate(app, db)
 
 app.register_blueprint(auth)
 app.register_blueprint(compras)
