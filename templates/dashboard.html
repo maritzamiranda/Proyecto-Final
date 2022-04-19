@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block contents %}
+
+{% if user %}
+<h1>Página de control de inventario</h1>
+<br>
+<br>
+<h4>Bienvenido, {{user.username}}</h4>
+<br>
+<br>
+<a href="{{ url_for('compras.home') }}">COMPRAS</a>
+<br>
+<a href="#">VENTAS</a>
+{% endif %}
+{% endblock %}
